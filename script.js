@@ -36,6 +36,8 @@ fetch("stad.json")
     myCity.sort(function(a, b){
         return b.population-a.population;
     })  
+
+     //Om myCountry har ett id på x, skriv ut till lista, hämta alla stadId och skriv utt till land OL
     for (var x=0; x<myCountry.length; x++) {
         myNum++;
      if (myCountry[x].id===x + 1) {
@@ -53,34 +55,3 @@ fetch("stad.json")
     console.log(err);
     
 })
-/*
-
-     //Om myland har ett id på 1, skriv ut till lista, hämta alla stadId och skriv utt till land OL
-     if (myLand[0].id===1) {
-        document.getElementById("lista").innerHTML += "<ol id=\"ol1\">" + myLand[0].countryname + "</ol>";
-        for (var i = 0; i<myCity.length; i++) {
-            if (myCity[i].countryid===1) {
-
-                document.getElementById("ol1").innerHTML += "<li>" + myCity[i].stadname + "</li>";
-        } 
-    }
-}   if (myLand[1].id===2) {
-        console.log("working");
-        document.getElementById("lista").innerHTML += "<ol id=\"ol2\">" + myLand[1].countryname + "</ol>";
-        for (var i = 0; i<myCity.length; i++) {
-         if (myCity[i].countryid===2) {
-            document.getElementById("ol2").innerHTML += "<li>" + myCity[i].stadname + "</li>";
-        }
-    }       
-
-}   if (myLand[1].id===2) {
-    console.log("working");
-    document.getElementById("lista").innerHTML += "<ol id=\"ol3\">" + myLand[1].countryname + "</ol>";
-    for (var i = 0; i<myCity.length; i++) {
-     if (myCity[i].countryid===2) {
-        document.getElementById("ol3").innerHTML += "<li>" + myCity[i].stadname + "</li>";
-    }
-}       
-
-}
-*/
